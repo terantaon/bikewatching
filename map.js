@@ -58,10 +58,7 @@ map.on('load', async () => {
 
     let jsonData;
     try {
-        const jsonurl = 'https://dsc106.com/labs/lab07/data/bluebikes-stations.json';
-
-        const jsonData = await d3.json(jsonurl);
-
+        jsonData = await d3.json('https://dsc106.com/labs/lab07/data/bluebikes-stations.json');
         console.log('Loaded JSON Data:', jsonData);
     } catch (error) {
         console.error('Error loading JSON:', error);
@@ -69,8 +66,7 @@ map.on('load', async () => {
 
     let trips;
     try {
-        const trips = await d3.csv('https://dsc106.com/labs/lab07/data/bluebikes-traffic-2024-03.csv');
-
+        trips = await d3.csv('https://dsc106.com/labs/lab07/data/bluebikes-traffic-2024-03.csv');
         console.log('Loaded CSV Data:', trips);
     } catch (error) {
         console.error('Error loading CSV:', error);
