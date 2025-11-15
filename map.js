@@ -185,7 +185,7 @@ map.on('load', async () => {
     }
 
     function updateTimeDisplay() {
-        timeFilter = Number(timeSlider.value);
+        let timeFilter = Number(timeSlider.value);
 
         if (timeFilter === -1) {
             selectedTime.textContent = '';
